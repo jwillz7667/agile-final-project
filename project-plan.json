@@ -1,0 +1,174 @@
+{
+  "title": "Final Project",
+  "repository": "jwillz7667/agile-final-project",
+  "scenario": "Educational simulation: back-end e-commerce product catalog",
+  "sprint": {
+    "title": "Sprint",
+    "start": "2026-09-26",
+    "end": "2026-10-09",
+    "goal": "Deliver the core create, retrieve, update, and delete product capabilities.",
+    "plannedPoints": 10,
+    "simulatedCompletedPoints": 5
+  },
+  "columns": [
+    "New Issues",
+    "Icebox",
+    "Product Backlog",
+    "Sprint Backlog",
+    "In Progress",
+    "Review/QA",
+    "Done"
+  ],
+  "stories": [
+    {
+      "number": 1,
+      "title": "Create a product",
+      "role": "catalog manager",
+      "need": "create a product with a name, description, category, and price",
+      "benefit": "make new merchandise available in the catalog",
+      "points": 3,
+      "status": "Done",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": "Sprint",
+      "body": "**As a** catalog manager\n**I need** to create a product with a name, description, category, and price\n**So that** I can make new merchandise available in the catalog.\n\n### Details and assumptions\n- Stakeholder requirement 1.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n- Planned for the two-week Sprint, September 26–October 9, 2026.\n\n### Acceptance criteria\n```gherkin\nGiven I am an authorized catalog manager and provide valid product details\nWhen I create the product\nThen the catalog returns a unique product identifier and the product can be retrieved\n```\n\n```gherkin\nGiven a required field is missing or the price is negative\nWhen I attempt to create the product\nThen the request is rejected and no product is added\n```\n\n### Estimate\n3 story points.\n"
+    },
+    {
+      "number": 2,
+      "title": "Retrieve a product",
+      "role": "shopper",
+      "need": "retrieve a product by its identifier",
+      "benefit": "view its current details before making a purchase",
+      "points": 2,
+      "status": "Done",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": "Sprint",
+      "body": "**As a** shopper\n**I need** to retrieve a product by its identifier\n**So that** I can view its current details before making a purchase.\n\n### Details and assumptions\n- Stakeholder requirement 2.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n- Planned for the two-week Sprint, September 26–October 9, 2026.\n\n### Acceptance criteria\n```gherkin\nGiven a product exists in the catalog\nWhen I retrieve it by its identifier\nThen I receive its name, description, category, price, and identifier\n```\n\n```gherkin\nGiven no product matches the supplied identifier\nWhen I request the product\nThen I receive a clear not-found response\n```\n\n### Estimate\n2 story points.\n"
+    },
+    {
+      "number": 3,
+      "title": "Update a product",
+      "role": "catalog manager",
+      "need": "update an existing product's details",
+      "benefit": "keep the catalog accurate",
+      "points": 3,
+      "status": "In Progress",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": "Sprint",
+      "body": "**As a** catalog manager\n**I need** to update an existing product's details\n**So that** I can keep the catalog accurate.\n\n### Details and assumptions\n- Stakeholder requirement 3.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n- Planned for the two-week Sprint, September 26–October 9, 2026.\n\n### Acceptance criteria\n```gherkin\nGiven I am an authorized catalog manager and a product exists\nWhen I submit valid changes\nThen the updated details are returned by subsequent retrievals and the product identifier remains unchanged\n```\n\n```gherkin\nGiven an update contains invalid product data\nWhen I submit the update\nThen it is rejected without changing the existing product\n```\n\n### Estimate\n3 story points.\n"
+    },
+    {
+      "number": 4,
+      "title": "Delete a product",
+      "role": "catalog manager",
+      "need": "delete a product from the catalog",
+      "benefit": "remove merchandise that is no longer offered",
+      "points": 2,
+      "status": "Sprint Backlog",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": "Sprint",
+      "body": "**As a** catalog manager\n**I need** to delete a product from the catalog\n**So that** I can remove merchandise that is no longer offered.\n\n### Details and assumptions\n- Stakeholder requirement 4.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n- Planned for the two-week Sprint, September 26–October 9, 2026.\n\n### Acceptance criteria\n```gherkin\nGiven I am an authorized catalog manager and a product exists\nWhen I delete it\nThen it is no longer retrievable or included in catalog results\n```\n\n```gherkin\nGiven the supplied identifier does not exist\nWhen I request deletion\nThen I receive a clear not-found response\n```\n\n### Estimate\n2 story points.\n"
+    },
+    {
+      "number": 5,
+      "title": "Like a product",
+      "role": "shopper",
+      "need": "record a like for a product",
+      "benefit": "express a positive preference",
+      "points": 2,
+      "status": "Product Backlog",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": null,
+      "body": "**As a** shopper\n**I need** to record a like for a product\n**So that** I can express a positive preference.\n\n### Details and assumptions\n- Stakeholder requirement 5.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n\n### Acceptance criteria\n```gherkin\nGiven I am an identified shopper and a product exists\nWhen I like the product\nThen my preference is recorded and its like count reflects that preference\n```\n\n```gherkin\nGiven I already like the product\nWhen I like it again\nThen my preference is not counted twice\n```\n\n```gherkin\nGiven I previously disliked the product\nWhen I like it\nThen the previous dislike is replaced by the like\n```\n\n### Estimate\n2 story points.\n"
+    },
+    {
+      "number": 6,
+      "title": "Dislike a product",
+      "role": "shopper",
+      "need": "record a dislike for a product",
+      "benefit": "express a negative preference",
+      "points": 2,
+      "status": "Product Backlog",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": null,
+      "body": "**As a** shopper\n**I need** to record a dislike for a product\n**So that** I can express a negative preference.\n\n### Details and assumptions\n- Stakeholder requirement 6.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n\n### Acceptance criteria\n```gherkin\nGiven I am an identified shopper and a product exists\nWhen I dislike the product\nThen my preference is recorded and its dislike count reflects that preference\n```\n\n```gherkin\nGiven I already dislike the product\nWhen I dislike it again\nThen my preference is not counted twice\n```\n\n```gherkin\nGiven I previously liked the product\nWhen I dislike it\nThen the previous like is replaced by the dislike\n```\n\n### Estimate\n2 story points.\n"
+    },
+    {
+      "number": 7,
+      "title": "List all products",
+      "role": "shopper",
+      "need": "browse a paginated list of catalog products",
+      "benefit": "discover the available merchandise",
+      "points": 3,
+      "status": "Icebox",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": null,
+      "body": "**As a** shopper\n**I need** to browse a paginated list of catalog products\n**So that** I can discover the available merchandise.\n\n### Details and assumptions\n- Stakeholder requirement 7.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n\n### Acceptance criteria\n```gherkin\nGiven the catalog contains products\nWhen I request the product list\nThen I receive a consistently ordered page of products and information for retrieving the next page\n```\n\n```gherkin\nGiven the catalog is empty\nWhen I request the product list\nThen I receive an empty list without an application error\n```\n\n### Estimate\n3 story points.\n"
+    },
+    {
+      "number": 8,
+      "title": "Query a subset of products",
+      "role": "shopper",
+      "need": "filter catalog products by category and price range",
+      "benefit": "find merchandise that matches my needs",
+      "points": 3,
+      "status": "Icebox",
+      "labels": [
+        "enhancement"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": null,
+      "body": "**As a** shopper\n**I need** to filter catalog products by category and price range\n**So that** I can find merchandise that matches my needs.\n\n### Details and assumptions\n- Stakeholder requirement 8.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n\n### Acceptance criteria\n```gherkin\nGiven products exist in different categories and price ranges\nWhen I request a valid category and price-range filter\nThen every returned product matches the supplied filters\n```\n\n```gherkin\nGiven no products match the filters\nWhen I submit the query\nThen I receive an empty result set\n```\n\n```gherkin\nGiven the minimum price exceeds the maximum price\nWhen I submit the query\nThen the request is rejected with a validation error\n```\n\n### Estimate\n3 story points.\n"
+    },
+    {
+      "number": 9,
+      "title": "Host the catalog in the cloud",
+      "role": "service operator",
+      "need": "host the catalog service in a cloud environment",
+      "benefit": "provide a reachable and maintainable service",
+      "points": 5,
+      "status": "Product Backlog",
+      "labels": [
+        "technical debt"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": null,
+      "body": "**As a** service operator\n**I need** to host the catalog service in a cloud environment\n**So that** I can provide a reachable and maintainable service.\n\n### Details and assumptions\n- Stakeholder requirement 9.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n\n### Acceptance criteria\n```gherkin\nGiven a deployable catalog application and an approved cloud environment\nWhen the application is deployed\nThen its configured HTTPS endpoint responds and its health check succeeds\n```\n\n```gherkin\nGiven the running application needs configuration or credentials\nWhen it starts\nThen these values are supplied through environment configuration or a secret store rather than committed source files\n```\n\n### Estimate\n5 story points.\n"
+    },
+    {
+      "number": 10,
+      "title": "Automate cloud deployments",
+      "role": "developer",
+      "need": "automatically test and deploy approved catalog changes",
+      "benefit": "deliver improvements consistently and reduce manual errors",
+      "points": 5,
+      "status": "Product Backlog",
+      "labels": [
+        "technical debt"
+      ],
+      "assignee": "jwillz7667",
+      "milestone": null,
+      "body": "**As a** developer\n**I need** to automatically test and deploy approved catalog changes\n**So that** I can deliver improvements consistently and reduce manual errors.\n\n### Details and assumptions\n- Stakeholder requirement 10.\n- This issue belongs to an educational planning simulation; board status does not claim implemented product functionality.\n\n### Acceptance criteria\n```gherkin\nGiven a change is merged into the main branch\nWhen the delivery pipeline runs\nThen it tests the application, builds a versioned artifact, and deploys it after the checks pass\n```\n\n```gherkin\nGiven a required test fails\nWhen the pipeline runs\nThen deployment stops and the currently deployed version remains available\n```\n\n```gherkin\nGiven a new deployment fails its health check\nWhen the pipeline evaluates the deployment\nThen the failure is reported and the documented rollback procedure can restore the previous artifact\n```\n\n### Estimate\n5 story points.\n"
+    }
+  ]
+}
